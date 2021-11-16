@@ -2,7 +2,7 @@ const plants = [
     {
       id: 1,
       name: 'Succulent Plant',
-      price: '39.99',
+      price: '1500.00',
       like: true,
       img: require('../assets/images/plants_1.jpg'),
       about:
@@ -12,7 +12,7 @@ const plants = [
     {
       id: 2,
       name: 'Dragon Plant',
-      price: '29.99',
+      price: '1100.00',
       like: false,
       img: require('../assets/images/plants_2.jpg'),
       about:
@@ -21,7 +21,7 @@ const plants = [
     {
       id: 3,
       name: 'Ravenea Plant',
-      price: '25.99',
+      price: '890.25',
       like: false,
       img: require('../assets/images/plants_3.jpg'),
       about:
@@ -31,7 +31,7 @@ const plants = [
     {
       id: 4,
       name: 'Potted Plant',
-      price: '25.99',
+      price: '1200.00',
       like: true,
       img: require('../assets/images/plants_4.jpg'),
       about:
@@ -40,7 +40,7 @@ const plants = [
     {
       id: 5,
       name: 'Ravenea Plant',
-      price: '50.99',
+      price: '1600.00',
       like: true,
       img: require('../assets/images/plants_5.jpg'),
       about:
@@ -49,7 +49,7 @@ const plants = [
     {
       id: 6,
       name: 'Dragon Plant',
-      price: '50.99',
+      price: '690.00',
       like: false,
       img: require('../assets/images/plants_6.jpg'),
       about:

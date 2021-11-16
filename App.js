@@ -4,10 +4,10 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
-import HomeScreen from '../sample_react/src/view/screens/HomeScreens';
-import DetailsSceeen from '../sample_react/src/view/screens/DetailsScreen';
+import HomeScreen from '../final_project/app/screens/HomeScreens';
+import DetailsSceeen from '../final_project/app/screens/DetailsScreen';
 import {StatusBar} from 'react-native';
-import COLORS from '../sample_react/src/consts/colors';
+import COLORS from '../final_project/app/consts/colors';
 
 const App = () => {
   return (

@@ -10,8 +10,8 @@ import {
 } from 'react-native';
 import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import COLORS from '../../consts/colors';
-import plants from '../../consts/plants';
+import COLORS from '../consts/colors';
+import plants from '../consts/plants';
 const width = Dimensions.get('window').width / 2 - 30;
 
 const HomeScreen = ({navigation}) => {
@@ -59,7 +59,7 @@ const HomeScreen = ({navigation}) => {
                   : 'rgba(0,0,0,0.2) ',
               }}>
               <Icon
-                name="favorite"
+                name="heart"
                 size={18}
                 color={plant.like ? COLORS.red : COLORS.black}
               />
@@ -77,7 +77,7 @@ const HomeScreen = ({navigation}) => {
             />
           </View>
 
-          <Text style={{fontWeight: 'bold', fontSize: 17, marginTop: 10}}>
+          <Text style={{fontWeight: 'bold', fontSize: 17, marginTop: 10, color:"#000000"}}>
             {plant.name}
           </Text>
           <View
@@ -86,8 +86,8 @@ const HomeScreen = ({navigation}) => {
               justifyContent: 'space-between',
               marginTop: 5,
             }}>
-            <Text style={{fontSize: 19, fontWeight: 'bold'}}>
-              ${plant.price}
+            <Text style={{fontSize: 16, fontWeight: 'bold', color:"#000000"}}>
+              Rs{plant.price}
             </Text>
             <View
               style={{
@@ -113,20 +113,20 @@ const HomeScreen = ({navigation}) => {
       style={{flex: 1, paddingHorizontal: 20, backgroundColor: COLORS.white}}>
       <View style={style.header}>
         <View>
-          <Text style={{fontSize: 25, fontWeight: 'bold'}}>Welcome to</Text>
+          <Text style={{fontSize: 25, fontWeight: 'bold',color:"#000000"}}>Welcome to</Text>
           <Text style={{fontSize: 38, color: COLORS.green, fontWeight: 'bold'}}>
             Plant Shop
           </Text>
         </View>
-        <Icon name="shopping-cart" size={28} />
+        <Icon name="shopping-cart" size={28} color="#000000"/>
       </View>
       <View style={{marginTop: 30, flexDirection: 'row'}}>
         <View style={style.searchContainer}>
-          <Icon name="search" size={25} style={{marginLeft: 20}} />
+          <Icon name="search" size={25} style={{marginLeft: 20}} color="#000000" />
           <TextInput placeholder="Search" style={style.input} />
         </View>
         <View style={style.sortBtn}>
-          <Icon name="sort" size={30} color={COLORS.white} />
+          <Icon name="bars" size={28} color={COLORS.white} />
         </View>
       </View>
       <CategoryList />
