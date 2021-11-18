@@ -3,8 +3,8 @@ import {View, SafeAreaView, Image, Text, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import COLORS from '../consts/colors';
 
-const DetailsScreen = ({navigation, route}) => {
-  const plant = route.params;
+const DetailsScreen2 = ({navigation, route}) => {
+  const flower = route.params;
 
   return (
     <SafeAreaView
@@ -17,7 +17,7 @@ const DetailsScreen = ({navigation, route}) => {
         <Icon name="shopping-cart" size={28} color="#000000" />
       </View>
       <View style={style.imageContainer}>
-        <Image source={plant.img} style={{resizeMode: 'contain', flex: 1}} />
+        <Image source={flower.img} style={{resizeMode: 'contain', flex: 1}} />
       </View>
       <View style={style.detailsContainer}>
         <View
@@ -37,7 +37,7 @@ const DetailsScreen = ({navigation, route}) => {
             justifyContent: 'space-between',
             alignItems: 'center',
           }}>
-          <Text style={{fontSize: 22, fontWeight: 'bold', color:"#000000"}}>{plant.name}</Text>
+          <Text style={{fontSize: 22, fontWeight: 'bold', color:"#000000"}}>{flower.name}</Text>
           <View style={style.priceTag}>
             <Text
               style={{
@@ -46,7 +46,7 @@ const DetailsScreen = ({navigation, route}) => {
                 fontWeight: 'bold',
                 fontSize: 15,
               }}>
-              Rs{plant.price}
+              Rs{flower.price}
             </Text>
           </View>
         </View>
@@ -59,7 +59,7 @@ const DetailsScreen = ({navigation, route}) => {
               lineHeight: 22,
               marginTop: 10,
             }}>
-            {plant.about}
+            {flower.about}
           </Text>
           <View
             style={{
@@ -158,4 +158,4 @@ const style = StyleSheet.create({
   },
 });
 
-export default DetailsScreen;
+export default DetailsScreen2;

@@ -12,12 +12,13 @@ import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import COLORS from '../consts/colors';
 import plants from '../consts/plants';
+import flowers from '../consts/flowers';
 const width = Dimensions.get('window').width / 2 - 30;
 
 const HomeScreen = ({navigation}) => {
   const [catergoryIndex, setCategoryIndex] = React.useState(0);
 
-  const categories = ['POPULAR', 'ORGANIC', 'INDOORS', 'SYNTHETIC'];
+  const categories = ['POPULAR', 'FLOWERS', 'SEEDS', 'SPRAYERS', 'POTS'];
 
   const CategoryList = () => {
     return (
@@ -115,7 +116,7 @@ const HomeScreen = ({navigation}) => {
         <View>
           <Text style={{fontSize: 25, fontWeight: 'bold',color:"#000000"}}>Welcome to</Text>
           <Text style={{fontSize: 38, color: COLORS.green, fontWeight: 'bold'}}>
-            Plant Shop
+            Bloomings Plant Nursery
           </Text>
         </View>
         <Icon name="shopping-cart" size={28} color="#000000"/>
