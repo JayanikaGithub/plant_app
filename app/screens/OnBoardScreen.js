@@ -7,29 +7,30 @@ import {PrimaryButton} from '../components/Button';
 const OnBoardScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: COLORS.white}}>
-      <View style={{height: 400}}>
+      <View style={{height: 450, width: 425}}>
         <Image
           style={{
             width: '100%',
-            resizeMode: 'contain',
-            top: -80,
+            resizeMode: 'cover',
+            top: -30,
+            alignItems: 'center',
           }}
-          source={require('../assets/images/plants.png')}
+          source={require('../assets/images/newback.png')}
         />
       </View>
       <View style={style.textContainer}>
         <View>
-          <Text style={{fontSize: 32, fontWeight: 'bold', textAlign: 'center', color:'green'}}>
-            BLOOMINGS PLANT NURSERY
+          <Text style={{fontSize: 35, fontWeight: 'bold', textAlign: 'center', color:'#000000',marginTop: 60}}>
+            
           </Text>
           <Text
             style={{
-              marginTop: 20,
+              marginTop: 5,
               fontSize: 18,
               textAlign: 'center',
               color: COLORS.grey,
             }}>
-            We help you to find best and beautiful plants
+           
           </Text>
         </View>
         <View style={style.indicatorContainer}>
@@ -40,7 +41,7 @@ const OnBoardScreen = ({navigation}) => {
         <PrimaryButton
           onPress={() => navigation.navigate('Home')}
           title="Get Started"
-          color="green"
+          color="#000000"
         />
       </View>
     </SafeAreaView>
@@ -50,9 +51,9 @@ const OnBoardScreen = ({navigation}) => {
 const style = StyleSheet.create({
   textContainer: {
     flex: 1,
-    paddingHorizontal: 50,
+    paddingHorizontal: 70,
     justifyContent: 'space-between',
-    paddingBottom: 40,
+    paddingBottom: 60,
   },
   indicatorContainer: {
     height: 50,
@@ -65,15 +66,15 @@ const style = StyleSheet.create({
     height: 12,
     width: 30,
     borderRadius: 15,
-    backgroundColor: COLORS.green,
-    marginHorizontal: 5,
+    backgroundColor: '#14eb2b',
+    marginHorizontal: 10,
   },
   indicator: {
     height: 12,
     width: 12,
     borderRadius: 15,
-    backgroundColor: COLORS.green,
-    marginHorizontal: 5,
+    backgroundColor: '#14eb2b',
+    marginHorizontal: 10,
   },
 });
 

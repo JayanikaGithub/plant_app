@@ -12,7 +12,6 @@ import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import COLORS from '../consts/colors';
 import plants from '../consts/plants';
-import flowers from '../consts/flowers';
 const width = Dimensions.get('window').width / 2 - 30;
 
 const HomeScreen = ({navigation}) => {
@@ -40,8 +39,9 @@ const HomeScreen = ({navigation}) => {
       </View>
     );
   };
-
+    
   const Card = ({plant}) => {
+    //console.log(setCategoryIndex);
     return (
       <TouchableOpacity
         activeOpacity={0.8}
@@ -116,7 +116,7 @@ const HomeScreen = ({navigation}) => {
         <View>
           <Text style={{fontSize: 25, fontWeight: 'bold',color:"#000000"}}>Welcome to</Text>
           <Text style={{fontSize: 38, color: COLORS.green, fontWeight: 'bold'}}>
-            Bloomings Plant Nursery
+            Blooming Plant Nursery
           </Text>
         </View>
         <Icon name="shopping-cart" size={28} color="#000000"/>

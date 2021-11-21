@@ -2,6 +2,7 @@ import React from 'react';
 import {View, SafeAreaView, Image, Text, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import COLORS from '../consts/colors';
+import {PrimaryButton} from '../components/Button';
 
 const DetailsScreen = ({navigation, route}) => {
   const plant = route.params;
@@ -54,7 +55,7 @@ const DetailsScreen = ({navigation, route}) => {
           <Text style={{fontSize: 20, fontWeight: 'bold', color:"#000000"}}>About</Text>
           <Text
             style={{
-              color: 'grey',
+              color: '#000000',
               fontSize: 16,
               lineHeight: 22,
               marginTop: 10,
@@ -94,6 +95,11 @@ const DetailsScreen = ({navigation, route}) => {
                 Buy
               </Text>
             </View>
+            <PrimaryButton
+              onPress={() => navigation.navigate('Home')}
+              title="Buy"
+              color="#000000"
+            />
           </View>
         </View>
       </View>
