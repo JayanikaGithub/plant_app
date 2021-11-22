@@ -15,7 +15,7 @@ import plants from '../consts/plants';
 const width = Dimensions.get('window').width / 2 - 30;
 
 const HomeScreen = ({navigation}) => {
-  const [catergoryIndex, setCategoryIndex] = React.useState(0);
+  const [catergoryIndex, setCategoryIndex] = React.useState(1);
 
   const categories = ['POPULAR', 'FLOWERS', 'SEEDS', 'SPRAYERS', 'POTS'];
 
@@ -25,7 +25,7 @@ const HomeScreen = ({navigation}) => {
         {categories.map((item, index) => (
           <TouchableOpacity
             key={index}
-            activeOpacity={0.8}
+            activeOpacity={0.9}
             onPress={() => setCategoryIndex(index)}>
             <Text
               style={[
