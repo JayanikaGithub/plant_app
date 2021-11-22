@@ -89,15 +89,10 @@ const DetailsScreen = ({navigation, route}) => {
               </View>
             </View>
 
-            <View style={style.buyBtn}>
-              <Text
-                style={{color: COLORS.white, fontSize: 18, fontWeight: 'bold'}}>
-                Buy
-              </Text>
-            </View>
+            
             <PrimaryButton
-              onPress={() => navigation.navigate('Home')}
-              title="Buy"
+              onPress={() => navigation.navigate('Thank')}
+              title="         Buy        "
               color="#000000"
             />
           </View>
