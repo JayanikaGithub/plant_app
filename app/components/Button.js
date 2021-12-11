@@ -24,7 +24,7 @@ const SecondaryButton = ({title, onPress = () => {}}) => {
 const style = StyleSheet.create({
   title: {color: COLORS.white, fontWeight: 'bold', fontSize: 25},
   btnContainer: {
-    backgroundColor: '#00B761',
+    backgroundColor: '#25D837',
     height: 60,
     borderRadius: 60,
     justifyContent: 'center',

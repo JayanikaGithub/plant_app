@@ -12,7 +12,7 @@ const OnBoardScreen = ({navigation}) => {
           style={{
             width: '100%',
             resizeMode: 'cover',
-            top: -30,
+            top: -15,
             alignItems: 'center',
           }}
           source={require('../assets/images/newback.png')}
@@ -53,7 +53,7 @@ const style = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 70,
     justifyContent: 'space-between',
-    paddingBottom: 60,
+    paddingBottom: 50,
   },
   indicatorContainer: {
     height: 50,
@@ -67,14 +67,14 @@ const style = StyleSheet.create({
     width: 30,
     borderRadius: 15,
     backgroundColor: '#14eb2b',
-    marginHorizontal: 10,
+    marginHorizontal: 8,
   },
   indicator: {
     height: 12,
     width: 12,
     borderRadius: 15,
-    backgroundColor: '#14eb2b',
-    marginHorizontal: 10,
+    backgroundColor: '#b1bcbe',
+    marginHorizontal: 8,
   },
 });
 

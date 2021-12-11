@@ -5,20 +5,20 @@ import COLORS from '../consts/colors';
 import {PrimaryButton} from '../components/Button';
 
 const DetailsScreen = ({navigation, route}) => {
-  const plant = route.params;
+  const pet = route.params;
 
   return (
     <SafeAreaView
       style={{
         flex: 1,
-        backgroundColor: COLORS.white,
+        backgroundColor: '#FCD400',
       }}>
       <View style={style.header}>
         <Icon name="long-arrow-left" size={28} color="#000000" onPress={() => navigation.goBack()} />
         <Icon name="shopping-cart" size={28} color="#000000" />
       </View>
       <View style={style.imageContainer}>
-        <Image source={plant.img} style={{resizeMode: 'contain', flex: 1}} />
+        <Image source={pet?.image} style={{resizeMode: 'contain', flex: 1}} />
       </View>
       <View style={style.detailsContainer}>
         <View
@@ -28,7 +28,7 @@ const DetailsScreen = ({navigation, route}) => {
             alignItems: 'flex-end',
           }}>
           <View style={style.line} />
-          <Text style={{fontSize: 18, fontWeight: 'bold', color:"#000000"}}>Best choice</Text>
+          <Text style={{fontSize: 18, fontWeight: 'bold', color:"#000000"}}>Your best choice</Text>
         </View>
         <View
           style={{
@@ -38,7 +38,7 @@ const DetailsScreen = ({navigation, route}) => {
             justifyContent: 'space-between',
             alignItems: 'center',
           }}>
-          <Text style={{fontSize: 22, fontWeight: 'bold', color:"#000000"}}>{plant.name}</Text>
+          <Text style={{fontSize: 22, fontWeight: 'bold', color:"#000000"}}>{pet?.name}</Text>
           <View style={style.priceTag}>
             <Text
               style={{
@@ -47,7 +47,7 @@ const DetailsScreen = ({navigation, route}) => {
                 fontWeight: 'bold',
                 fontSize: 15,
               }}>
-              Rs{plant.price}
+              Rs{pet.price}
             </Text>
           </View>
         </View>
@@ -60,7 +60,7 @@ const DetailsScreen = ({navigation, route}) => {
               lineHeight: 22,
               marginTop: 10,
             }}>
-            {plant.about}
+            {pet.about}
           </Text>
           <View
             style={{
@@ -81,6 +81,7 @@ const DetailsScreen = ({navigation, route}) => {
                   fontSize: 20,
                   marginHorizontal: 10,
                   fontWeight: 'bold',
+                  color: '#000000',
                 }}>
                 1
               </Text>
@@ -92,7 +93,7 @@ const DetailsScreen = ({navigation, route}) => {
             
             <PrimaryButton
               onPress={() => navigation.navigate('Thank')}
-              title="         Buy        "
+              title= "       Place order       "
               color="#000000"
             />
           </View>
@@ -110,15 +111,15 @@ const style = StyleSheet.create({
     justifyContent: 'space-between',
   },
   imageContainer: {
-    flex: 0.45,
-    marginTop: 20,
+    flex: 0.50,
+    marginTop: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },
   detailsContainer: {
     flex: 0.55,
     backgroundColor: COLORS.light,
-    marginHorizontal: 7,
+    marginHorizontal: 4,
     marginBottom: 7,
     borderRadius: 20,
     marginTop: 30,
@@ -144,13 +145,13 @@ const style = StyleSheet.create({
   buyBtn: {
     width: 130,
     height: 50,
-    backgroundColor: COLORS.green,
+    backgroundColor: '#05703D',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 30,
   },
   priceTag: {
-    backgroundColor: COLORS.green,
+    backgroundColor: '#D90000',
     width: 80,
     height: 40,
     justifyContent: 'center',
