@@ -2,15 +2,15 @@ import React from 'react';
 import {SafeAreaView, StyleSheet, View, Text, Image} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import COLORS from '../consts/colors';
+import COLORS from '../../app/consts/colors';
 import pets from '../consts/plants';
-import {PrimaryButton} from '../components/Button';
+import {PrimaryButton} from '../../app/components/Button';
 
-const CartScreen = ({pet,navigation}) => {
+const CartScreen = ({navigation}) => {
   const CartCard = ({item}) => {
     return (
       <View style={style.cartCard}>
-        <Image source={pet.image} style={{height: 80, width: 80}} />
+        <Image source={pets.image} style={{height: 80, width: 80}} />
         <View
           style={{
             height: 100,
@@ -18,17 +18,17 @@ const CartScreen = ({pet,navigation}) => {
             paddingVertical: 20,
             flex: 1,
           }}>
-          <Text style={{fontWeight: 'bold', fontSize: 16}}>{item.name}</Text>
+          <Text style={{fontWeight: 'bold', fontSize: 16}}>{pets.name}</Text>
           <Text style={{fontSize: 13, color: COLORS.grey}}>
-            {item.ingredients}
+            {item.type}
           </Text>
           <Text style={{fontSize: 17, fontWeight: 'bold'}}>${item.price}</Text>
         </View>
         <View style={{marginRight: 20, alignItems: 'center'}}>
           <Text style={{fontWeight: 'bold', fontSize: 18}}>3</Text>
           <View style={style.actionBtn}>
-            <Icon name="minus" size={25} color={COLORS.white} />
-            <Icon name="plus" size={25} color={COLORS.white} />
+            <Icon name="minus" size={20} color={COLORS.white} />
+            <Icon name="plus" size={20} color={COLORS.white} />
           </View>
         </View>
       </View>
@@ -37,8 +37,8 @@ const CartScreen = ({pet,navigation}) => {
   return (
     <SafeAreaView style={{backgroundColor: COLORS.white, flex: 1}}>
       <View style={style.header}>
-        <Icon name="arrow-back-ios" size={28} onPress={navigation.goBack} />
-        <Text style={{fontSize: 20, fontWeight: 'bold'}}>Cart</Text>
+        <Icon name="long-arrow-left" size={28} onPress={navigation.goBack} />
+        <Text style={{fontSize: 20, fontWeight: 'bold'}}> Cart</Text>
       </View>
       <FlatList
         showsVerticalScrollIndicator={false}

@@ -11,7 +11,7 @@ const DetailsScreen = ({navigation, route}) => {
     <SafeAreaView
       style={{
         flex: 1,
-        backgroundColor: '#FCD400',
+        backgroundColor: '#FBE781',
       }}>
       <View style={style.header}>
         <Icon name="long-arrow-left" size={28} color="#000000" onPress={() => navigation.goBack()} />
@@ -27,8 +27,8 @@ const DetailsScreen = ({navigation, route}) => {
             flexDirection: 'row',
             alignItems: 'flex-end',
           }}>
-          <View style={style.line} />
-          <Text style={{fontSize: 18, fontWeight: 'bold', color:"#000000"}}>Your best choice</Text>
+          <Icon name="star-half-full" size={28} color="#000000" />
+          <Text style={{fontSize: 18, fontWeight: 'bold', color:"#000000"}}>     Your best choice</Text>
         </View>
         <View
           style={{
@@ -92,7 +92,7 @@ const DetailsScreen = ({navigation, route}) => {
 
             
             <PrimaryButton
-              onPress={() => navigation.navigate('Thank')}
+              onPress={() => navigation.navigate('CartScreen')}
               title= "       Place order       "
               color="#000000"
             />

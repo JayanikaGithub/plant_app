@@ -16,8 +16,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import pets from '../consts/plants';
 const {height} = Dimensions.get('window');
 const petCategories = [
-  {name: 'POPULAR', icon: 'star'},
   {name: 'FLOWERS', icon: 'tree'},
+  {name: 'PLANTS', icon: 'star'},
   {name: 'SEEDS', icon: 'cogs'},
   {name: 'POTS', icon: 'bitbucket'},
   {name: 'SPRAYERS', icon: 'fire-extinguisher'},
@@ -46,10 +46,10 @@ const Card = ({pet, navigation}) => {
           {/* Name and gender icon */}
           <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
             <Text
-              style={{fontWeight: 'bold', color: COLORS.dark, fontSize: 24}}>
+              style={{fontWeight: 'bold', color: COLORS.dark, fontSize: 20}}>
               {pet?.name}
             </Text>
-            <Icon name="gratipay" size={24} color={'#fa415e'} />
+            <Icon name="heart" size={22} color={'#fa415e'} />
           </View>
 
           {/* Render the age and type */}
@@ -95,7 +95,7 @@ const HomeScreen = ({navigation}) => {
         
         <View>
           <Text style={{fontSize: 30, fontWeight: 'bold',color:"#000000"}}>Welcome to</Text>
-          <Text style={{fontSize: 45, color: COLORS.green, fontWeight: 'bold'}}>
+          <Text style={{fontSize: 45, color: "#33BB77", fontWeight: 'bold'}}>
             Blooming Plant Nursery
           </Text>
         </View>
@@ -134,7 +134,7 @@ const HomeScreen = ({navigation}) => {
                       backgroundColor:
                         selectedCategoryIndex == index
                           ? COLORS.lightgreen
-                          : '#FFFA84',
+                          : '#F5FF80',
                     },
                   ]}>
                   <Icon
@@ -142,7 +142,7 @@ const HomeScreen = ({navigation}) => {
                     size={20}
                     color={
                       selectedCategoryIndex == index
-                        ? COLORS.white
+                        ? COLORS.dark
                         : COLORS.dark
                     }
                   />
@@ -178,7 +178,7 @@ const style = StyleSheet.create({
   },
   mainContainer: {
     flex: 1,
-    backgroundColor: '#05703D',
+    backgroundColor: '#B3FBBA',
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
     marginTop: 1,
@@ -204,8 +204,8 @@ const style = StyleSheet.create({
     borderRadius: 10,
   },
   categoryBtnName: {
-    color: COLORS.white,
-    fontSize: 14,
+    color: COLORS.dark,
+    fontSize: 12,
     marginTop: 10,
     fontWeight: 'bold',
   },
@@ -216,20 +216,20 @@ const style = StyleSheet.create({
   },
   cardDetailsContainer: {
     height: 120,
-    backgroundColor: '#fff',
+    backgroundColor: '#33BB77',
     flex: 1,
     borderTopRightRadius: 10,
     borderBottomRightRadius: 10,
     borderTopLeftRadius: 0,
     borderBottomLeftRadius: 0,
-    padding: 40,
+    padding: 20,
     justifyContent: 'center',
   },
   cardImageContainer: {
-    height: 160,
-    width: 140,
+    height: 180,
+    width: 160,
     marginTop: 15,
-    backgroundColor: '#FCD400',
+    backgroundColor: '#F5FF80',
     borderRadius: 20,
   },
 });
