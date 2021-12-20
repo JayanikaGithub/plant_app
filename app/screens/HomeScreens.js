@@ -134,7 +134,7 @@ const HomeScreen = ({navigation}) => {
                       backgroundColor:
                         selectedCategoryIndex == index
                           ? COLORS.lightgreen
-                          : '#F5FF80',
+                          : '#FCD400',
                     },
                   ]}>
                   <Icon

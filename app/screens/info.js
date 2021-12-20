@@ -15,7 +15,7 @@ const ThankyouScreen = ({navigation}) => {
             top: -30,
             alignItems: 'center',
           }}
-          source={require('../assets/images/thankscr.png')}
+          source={require('../assets/images/pay.png')}
         />
       </View>
       <View style={style.textContainer}>
@@ -38,9 +38,9 @@ const ThankyouScreen = ({navigation}) => {
           <View style={style.indicator} />
           <View style={style.indicator} />
         </View>
-        <SecondaryButton
-          onPress={() => navigation.navigate('BoardScreen')}
-          title="Back to start"
+        <PrimaryButton
+          onPress={() => navigation.navigate('CardPayment')}
+          title="Next"
           color="green"
         />
       </View>

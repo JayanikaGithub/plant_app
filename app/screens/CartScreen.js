@@ -20,17 +20,17 @@ const CartScreen = ({navigation}) => {
               paddingVertical: 20,
               flex: 1,
             }}>
-            <Text style={{fontWeight: 'bold', fontSize: 16, color: COLORS.dark}}>{item.name}</Text>
-            <Text style={{fontSize: 13, color: COLORS.grey}}>
+            <Text style={{fontWeight: 'bold', fontSize: 20, color: COLORS.dark}}>{item.name}</Text>
+            <Text style={{fontSize: 15, color: '#B3FBBA'}}>
               {item.ingredients}
             </Text>
-            <Text style={{fontSize: 17, fontWeight: 'bold', color: COLORS.dark}}>Rs.{item.price}</Text>
+            <Text style={{fontSize: 15, color: COLORS.dark}}>Rs.{item.price}</Text>
           </View>
           <View style={{marginRight: 20, alignItems: 'center'}}>
             <Text style={{fontWeight: 'bold', fontSize: 18, color: COLORS.dark}}>1</Text>
             <View style={style.actionBtn}>
               <Icon name=   ""  size={25} color={COLORS.dark} />
-              <Icon name="arrows-h" size={30} color={COLORS.dark} />
+              <Icon name="arrows-h" size={26} color={COLORS.white} />
             </View>
           </View>
         </View>
@@ -62,7 +62,11 @@ const CartScreen = ({navigation}) => {
                 <Text style={{fontSize: 18, fontWeight: 'bold',color: COLORS.dark}}>Rs.5200.00</Text>
               </View>
               <View style={{marginHorizontal: 30}}>
-                <PrimaryButton title="CHECKOUT" />
+              <PrimaryButton
+              onPress={() => navigation.navigate('info')}
+              title= "       Place order       "
+              color="#000000"
+             />
               </View>
             </View>
           )}
@@ -72,7 +76,7 @@ const CartScreen = ({navigation}) => {
   };
   const style = StyleSheet.create({
     header: {
-      paddingVertical: 20,
+      paddingVertical: 40,
       flexDirection: 'row',
       alignItems: 'center',
       marginHorizontal: 20,
@@ -81,7 +85,7 @@ const CartScreen = ({navigation}) => {
       height: 100,
       elevation: 15,
       borderRadius: 10,
-      backgroundColor: "#58D164",
+      backgroundColor: "#B3FBBA",
       marginVertical: 10,
       marginHorizontal: 20,
       paddingHorizontal: 10,
@@ -91,7 +95,7 @@ const CartScreen = ({navigation}) => {
     actionBtn: {
       width: 90,
       height: 40,
-      backgroundColor: "#B3FBBA",
+      backgroundColor: "#33BB77",
       borderRadius: 30,
       paddingHorizontal: 10,
       flexDirection: 'row',

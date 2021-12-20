@@ -4,7 +4,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import COLORS from '../consts/colors';
 import {PrimaryButton, SecondaryButton} from '../components/Button';
 
-const ThankyouScreen = ({navigation}) => {
+const LocationScreen = ({navigation}) => {
   return (
     <SafeAreaView style={{flex: 1, backgroundColor: COLORS.white}}>
       <View style={{height: 450, width: 425}}>
@@ -15,7 +15,7 @@ const ThankyouScreen = ({navigation}) => {
             top: -30,
             alignItems: 'center',
           }}
-          source={require('../assets/images/thankscr.png')}
+          source={require('../assets/images/location.png')}
         />
       </View>
       <View style={style.textContainer}>
@@ -38,8 +38,8 @@ const ThankyouScreen = ({navigation}) => {
           <View style={style.indicator} />
           <View style={style.indicator} />
         </View>
-        <SecondaryButton
-          onPress={() => navigation.navigate('BoardScreen')}
+        <PrimaryButton
+          onPress={() => navigation.navigate('Thank')}
           title="Back to start"
           color="green"
         />
@@ -58,4 +58,4 @@ const style = StyleSheet.create({
   
 });
 
-export default ThankyouScreen;
+export default LocationScreen;

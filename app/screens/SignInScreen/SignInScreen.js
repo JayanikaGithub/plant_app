@@ -40,7 +40,7 @@ const SignInScreen = () => {
         <Image
           source={Logo}
           style={[styles.logo, {height: height * 0.3}]}
-          resizeMode="contain"
+          resizeMode="cover"
         />
 
         <CustomInput
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   root: {
     alignItems: 'center',
     padding: 40,
-    backgroundColor:"#B3FBBA",
+    backgroundColor:"#fff",
   },
   logo: {
     width: '70%',

@@ -30,11 +30,11 @@ const styles = StyleSheet.create({
     marginVertical: 5,
 
     alignItems: 'center',
-    borderRadius: 5,
+    borderRadius: 10,
   },
 
   container_PRIMARY: {
-    backgroundColor: '#26B434',
+    backgroundColor: '#25D837',
   },
 
   container_SECONDARY: {
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
   container_TERTIARY: {},
 
   text: {
-    fontWeight: 'bold',
+    
     color: 'white',
     fontSize: 16,
   },
