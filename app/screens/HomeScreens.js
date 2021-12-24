@@ -154,6 +154,7 @@ const HomeScreen = ({navigation}) => {
 
           {/* Render the cards with flatlist */}
           <View style={{marginTop: 20}}>
+          <SafeAreaView>
             <FlatList
               showsVerticalScrollIndicator={false}
               data={filteredPets}
@@ -161,6 +162,9 @@ const HomeScreen = ({navigation}) => {
                 <Card pet={item} navigation={navigation} />
               )}
             />
+          </SafeAreaView>
+
+            
           </View>
         </View>
       </ScrollView>

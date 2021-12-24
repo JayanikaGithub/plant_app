@@ -40,7 +40,7 @@ const LocationScreen = ({navigation}) => {
         </View>
         <PrimaryButton
           onPress={() => navigation.navigate('Thank')}
-          title="Back to start"
+          title="Save"
           color="green"
         />
       </View>

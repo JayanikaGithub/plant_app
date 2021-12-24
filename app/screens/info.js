@@ -15,7 +15,7 @@ const ThankyouScreen = ({navigation}) => {
             top: -30,
             alignItems: 'center',
           }}
-          source={require('../assets/images/pay.png')}
+          source={require('../assets/images/123c.png')}
         />
       </View>
       <View style={style.textContainer}>

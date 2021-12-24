@@ -29,8 +29,8 @@ const CartScreen = ({navigation}) => {
           <View style={{marginRight: 20, alignItems: 'center'}}>
             <Text style={{fontWeight: 'bold', fontSize: 18, color: COLORS.dark}}>1</Text>
             <View style={style.actionBtn}>
-              <Icon name=   ""  size={25} color={COLORS.dark} />
-              <Icon name="arrows-h" size={26} color={COLORS.white} />
+              <Icon name=   "chevron-left"  size={25} margin={30} padding={30} color={COLORS.dark} />
+              <Icon name="chevron-right" size={25} padding={30} color={COLORS.dark} />
             </View>
           </View>
         </View>
@@ -97,7 +97,7 @@ const CartScreen = ({navigation}) => {
       height: 40,
       backgroundColor: "#33BB77",
       borderRadius: 30,
-      paddingHorizontal: 10,
+      paddingHorizontal: 20,
       flexDirection: 'row',
       justifyContent: 'center',
       alignContent: 'center',

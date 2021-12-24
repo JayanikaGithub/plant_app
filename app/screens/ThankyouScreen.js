@@ -38,7 +38,7 @@ const ThankyouScreen = ({navigation}) => {
           <View style={style.indicator} />
           <View style={style.indicator} />
         </View>
-        <SecondaryButton
+        <PrimaryButton
           onPress={() => navigation.navigate('BoardScreen')}
           title="Back to start"
           color="green"
